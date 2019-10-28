@@ -13,11 +13,6 @@ Text Domain: Makro
 
 /* Menu de navegación */
 
-html, body {
-    width: auto !important;
-    overflow-x: hidden !important;
-}
-
 :root {
     --colormakro : #d22630;
     --sombra : rgba(0, 0, 0, 0.3);
@@ -27,7 +22,6 @@ html, body {
 
 
 * {
-    margin: auto;
     font-family: 'helvetica-black', sans-serif;
     margin: 0;
     padding: 0;
@@ -56,7 +50,7 @@ header {
     height: 105px;
 }
 
-.c-header .menu-global {
+.c-header .menu-container {
     border: var(--colormakro);
     display: flex;
     justify-content: space-between;
@@ -65,13 +59,13 @@ header {
     background: var(--colormakro);
 }
 
-.menu-global, .global-productos, .global-recetas, .global-footer {
+.menu-container, .container, .container-productos, .container-recetas, .container-footer {
     width: 100%;
     margin-right: auto;
     margin-left: auto;
 }
 
-.menu-global {
+.menu-container {
     height: 105px;
 }
 .c-header_m__left {
@@ -212,11 +206,7 @@ header {
 
 /*Products Home*/
 
-.products-destacados {
-    padding-top: 25px;
-    margin-left: auto;
-    margin-right: auto;
-}
+.products-destacados {padding-top: 20px;margin-left: 20%;}
 
 .tittle-products {
     color: var(--colormakro);
@@ -240,14 +230,13 @@ header {
 }
 
 .contenedor-products-destacados {
-    display: flex;
     padding-top: 15px;
     position: relative;
 }
 
 .contenedor_imagen_texto {
     width:186.5px;
-    margin: 30px;
+    margin-right: 34px;
     position:relative;
     display:inline-block;
     /* vertical-align:top; */
@@ -298,7 +287,7 @@ header {
 }
 
 .margenes-categ {
-    max-width: 750px;
+    max-width: 260px;
     margin-right: auto;
     margin-left: auto;
     position: relative;
@@ -319,7 +308,7 @@ header {
 
 .swipper-slide {
     width: 278px;
-    margin: 10px;
+    margin-right: 30px;
 }
 
 .slide-item {
@@ -350,11 +339,11 @@ header {
 
 /*Recetas Home*/
 
-.global-recetas {
+.container-recetas {
     margin-top: 100px;
 }
 
-.subglobal-recetas {
+.subcontainer-recetas {
     padding: 20px 0 0;
     text-align: center;
     max-width: 1012px;
@@ -398,7 +387,251 @@ header {
 
 
 
+/*** estilos para el footer  ***/
+.footer {
+    background-color:  #d22630;
+    color: white;
+    height: 132px;
+}
 
+.footer>.container-footer {
+    padding: 20px 32px;
+    height: 132px;
+}
+
+.container-footer {
+    padding-left: 12%;
+    padding-right: 12%;
+}
+.blockes {
+    height: 105px;
+    -webkit-box-pack: justify;
+    justify-content: space-between;
+}
+.icon-footer {
+    width: 20px;
+    height: 20px;
+    margin-right: 7px;
+}
+
+.section1 {
+    text-align: center;
+    margin-bottom: 20px;
+    /* display: none; */
+}
+
+.section1 img {
+    margin-top: 20px;
+    max-width: 190px;
+}
+
+.section1 a {
+    text-decoration: none;
+    color: white;
+}
+
+.section2 {
+    margin: 0 0 18px 114px;
+}
+
+.seccion2-footer {
+    margin-bottom: 0.8rem;
+    font-size: 10px;
+    font-weight: lighter;
+}
+
+.seccion2-footer span {
+    font-size: 12px;
+    vertical-align: middle;
+}
+
+.seccion2-footer a {
+    color: white;
+    text-decoration: none;
+}
+
+
+.footer .section2 .aux1 {
+    width: 100%;
+    height: 20px;
+}
+
+.footer .section2 .aux2 {
+    width: 100%;
+    height: 30px;
+}
+
+.footer .section2 .footer_cont_item2 {
+    text-decoration:none;
+    width: 100%;
+    height: 25px;
+    margin: 2px;
+    display: -webkit-flex; /* Safari */
+    -webkit-flex-direction:  row; /* Safari 6.1+ */
+    display: flex;
+    flex-direction:  row;
+}
+
+ 
+.footer .section2 .footer_cont_item2 .footer_icon_items2 {
+    width: 10%;
+    height: 25px;
+    margin: 0;
+    color: #fff;
+    fill: #fff;
+    padding: 0 0 3px 0;
+}
+
+.footer .section2 .footer_cont_item2 .footer_icon_text2 {
+    width: 90%;
+    height: 25px;
+    text-align: left;
+    padding: 3px 0 0 0;
+    margin: 0;
+    color: #FFF;
+    font-size: 12px;
+    font-family: "Aller", sans-serif;
+}
+
+.footer .section3 {
+    margin-left: 69px;
+    float: left;
+    display: -webkit-flex; 
+    -webkit-flex-direction:  column; 
+    display: flex;
+    flex-direction:  column;
+}
+
+.footer .section3 .aux1 {
+    width: 100%;
+    height: 20px;
+}
+
+.footer .section3 .aux2 {
+    width: 100%;
+    height: 25px;
+}
+
+.footer .section3 .text_title {
+    margin: 0;
+    width: 100%;
+    height: 25px;
+    color: #FFF;
+    font-size: 14px;
+    text-align: left;
+}
+
+.footer .section3 .text_section {
+    margin: 0;
+    width: 100%;
+    height: 20px;
+    color: #FFF;
+    font-size: 11px;
+    text-align: left;
+}
+
+.footer .section3 .input_mail {
+    border-radius: 15px 0 0 15px;
+    margin-right: -17px;
+    padding: 0 15px;
+    display: -webkit-flex; 
+    -webkit-flex-direction:  row; 
+    display: flex;
+    flex-direction:  row;
+    padding: 5px;
+
+}
+
+.footer .section3 .input_mail .input_data {
+    outline: 0;
+    border: none;
+    width: 45%;
+    float: left;
+    margin: 0;
+    padding: 0 15px;
+    border-radius: 15px 0 0 15px;
+    margin-right: -17px;
+    min-height: 28px;
+}
+
+.input_data::placeholder {
+    font-size: 12px;
+}
+
+.footer .section3 .input_mail .boton_data {
+    width: 45%;
+    float: left;
+    margin: 0;
+    background-color: #ed8b00;
+    font-size: 17px;
+    color:#FFF;
+    border: none;
+    border-radius: 20px;
+    padding: 0 30px;
+    min-height: 28px;
+    user-select: none;
+    text-align: left;
+}
+
+
+/*** estilos para seccion4 ***/
+.footer .section4 {
+    background-color:  #d22630;
+    width: 19%;
+    margin: 0px auto;
+    float: left;
+    display: -webkit-flex; 
+    -webkit-flex-direction:  column; 
+    display: flex;
+    flex-direction:  column;
+}
+
+.footer .section4 .aux1 {
+    width: 100%;
+    height: 20px;
+}
+
+.footer .section4 .aux2 {
+    width: 100%;
+    height: 35px;
+}
+
+.footer .section4 .text_section {
+    margin-left: 80px;
+    width: 120px;
+    height: 20px;
+    text-align: left;
+    padding: 0 0 15px 0;
+    color: #FFF; 
+    font-size: 14px;
+    font-family: "Aller", sans-serif;
+}
+
+.footer .section4 .footer_cont_item {
+    margin-left: 80px;
+    text-decoration:none;
+    width: 100%;
+    height: 50px;
+    display: -webkit-flex; 
+    -webkit-flex-direction:  row; 
+    display: flex;
+    flex-direction:  row;
+}
+
+
+.footer .section4 .footer_cont_item .footer_icon_items {
+    width: 23px;
+    height: 25px;
+    margin: 0;
+    padding: 0 0 3px 0;
+}
+
+.footer .section4 .footer_cont_item .footer_icon_text {
+    margin-left: 3px;
+    color: #FFF;
+    font-size: 14px;
+    font-family: "Aller", sans-serif;
+} 
 
 /* PAGE PRODUCTO */
 
@@ -523,9 +756,8 @@ header {
     left: 0;
 }
 
-.global-productos {
+.container-productos {
     display: flex;
-    margin-bottom: 22px;
 }
 
 .content-productos {
@@ -580,7 +812,7 @@ header {
 
 /*categ product*/
 
-.global-categ-product h1 {
+.container-categ-product h1 {
     margin-bottom: 45px;
     margin-top: 35px;
     text-align: center;
@@ -625,7 +857,7 @@ header {
 /* MEDIA QUERIES */
 
 @media (min-width: 1200px) {
-    .menu-global, .global-productos, .global-recetas, .global-footer {
+    .menu-container, .container-productos, .container-recetas, .container-footer, .container {
         max-width: 1440px!important;
     }
 }
@@ -643,8 +875,9 @@ header {
 }
 
 @media (min-width: 768px) {
-
-
+    .products-destacados {
+        padding-top: 33px;
+    }
     .tittle-products {
         font-size: 22px;
     }
@@ -662,7 +895,7 @@ header {
         margin-bottom: 34px;
         font-size: 22px;
     }
-    .subglobal-recetas {
+    .subcontainer-recetas {
         -webkit-box-align: center;
         align-items: center;
         display: flex;
@@ -671,7 +904,7 @@ header {
         margin-bottom: 41px;
         padding: 20px 1rem 0;
     }
-    .subglobal-recetas {
+    .subcontainer-recetas {
         -webkit-box-align: center;
         align-items: center;
         display: flex;
@@ -728,140 +961,16 @@ header {
     cursor: pointer;
 }
 
+
+
+
 .nav-desktop {
     display: block;
 }
 
-@media (max-width:750px) {
-    .swipper-wrapper {
-        flex-direction: column;
-    }
-    .margenes-categ {
-        display: table;
-    }
-    .global-recetas {
-        margin-top: 20px;
-    }
-    .txt-recetas p {
-        font-size: 14px;
-    }
-    .subglobal-recetas img {
-        width: 100%;
-    }
-
-    .segundoGroup {
-        margin-top: 40px;
-    }
-}
-
-
-
-
-
-
-.casos-exito-group {
-    position: relative;
-}
-
-.box-exito {
-    display: flex;
-    width: 100%;
-    margin-left: auto;
-    margin-right: auto;
-}
-
-.subbox-exito {
-    margin: 0 auto;
-    padding: 40px 0;
-}
-
-.title-exito {
-    font-weight: 600;
-    font-size: 22px;
-    text-align: center;
-    color: var(--colormakro);
-}
-
-.videos-exito {
-    margin-top: 30px;
-    width: 840px;
-    max-width: unset;
-    display: -webkit-inline-box;
-    flex-wrap: wrap;
-    margin-right: auto;
-    margin-left: auto;
-}
-
-.video-box {
-    width: 30%;
-    margin-left: 15px;
-    margin-right: 15px;
-    margin-bottom: 45px;
-    text-align: center;
-    position: relative;
-}
-
-.video-item {
-    cursor: pointer;
-}
-
-.video-item p {
-    cursor: pointer;
-    text-align: center;
-    color: var(--colormakro);
-    font-weight: 700;
-}
-
-.img-video {
-    width: 100%;
-}
-
-.play-img {
-    top: 35%;
-    left: 42.5%;
-    position: absolute;
-    display: none;
-}
-
-
-
-
 
 @media (max-width: 880px) {
 
-    .swipper-wrapper {
-        margin-left: 20px;
-    }
-
-    .slide-item img {
-        width: 90%;
-        height: 200px;
-    }
-
-    .texto {
-        font-size: 13px;
-    }
-    .w-100 {
-        display: block!important;
-    }
-
-    .imagen {
-        display: flex;
-    }
-
-    .contenedor_imagen_texto {
-        margin: 0;
-    }
-    .welcome-txt {
-        font-size: 18px;
-        margin: 0;
-    }
-    .parrafo-txt {
-        margin: 0;
-        font-size: 12px;
-        text-align: center;
-        padding: 10px;
-    }
     .d-desktop, .nav-desktop {
         display: none;
     } 
@@ -869,11 +978,6 @@ header {
     .nav-mobile {
         position: relative;
     }
-    .txt-banner {
-        height: 90px;
-    }
-
-
 
     .menu {
         width: 100%;
@@ -892,7 +996,7 @@ header {
         display: flex;
         height: 75px;
     }
-    .c-header_m__left .c-header__main, .menu-global, .c-header {
+    .c-header_m__left .c-header__main, .menu-container, .c-header {
         height: 75px;
     }
     .c-header__main {
@@ -940,173 +1044,23 @@ header {
     }
 }
 
-.modal-body {
-    display: none;
-}
-
-.img-video:hover ~ .play-img {
-    display: block;
-}
-
-
-/*** estilos para el footer ***/
-.footer {
-    background-color: #d22630;
-    color: white;
-    height: 132px;
-    }
-    
-    .footer>.container-footer {
-    padding: 20px 32px;
-    height: 132px;
-    }
-    
-    .container-footer {
-    padding-left: 12%;
-    padding-right: 12%;
-    }
-    .blockes {
-    height: 105px;
-    -webkit-box-pack: justify;
-    justify-content: space-between;
-    }
-    .icon-footer {
-    width: 20px;
-    height: 20px;
-    margin-right: 7px;
-    }
-    
-    .section1 {
-    text-align: center;
-    margin-bottom: 20px;
-    /* display: none; */
-    }
-    
-    .section1 img {
-    margin-top: 20px;
-    max-width: 190px;
-    }
-    
-    .section1 a {
-    text-decoration: none;
-    color: white;
-    }
-    
-    .section2 {
-    margin: 0 0 18px 114px;
-    }
-    
-    .seccion2-footer {
-    margin-bottom: 0.8rem;
-    font-size: 10px;
-    font-weight: lighter;
-    }
-    
-    .seccion2-footer span {
-    font-size: 12px;
-    vertical-align: middle;
-    }
-    
-    .seccion2-footer a {
-    color: white;
-    text-decoration: none;
-    }
-    
-    
-    .footer .section2 .aux1 {
-    width: 100%;
-    height: 20px;
-    }
-    
-    .footer .section2 .aux2 {
-    width: 100%;
-    height: 30px;
-    }
-    
-    .footer .section2 .footer_cont_item2 {
-    text-decoration:none;
-    width: 100%;
-    height: 25px;
-    margin: 2px;
-    display: -webkit-flex; /* Safari */
-    -webkit-flex-direction: row; /* Safari 6.1+ */
-    display: flex;
-    flex-direction: row;
-    }
-    
-    .footer .section2 .footer_cont_item2 .footer_icon_items2 {
-    width: 10%;
-    height: 25px;
-    margin: 0;
-    color: #fff;
-    fill: #fff;
-    padding: 0 0 3px 0;
-    }
-    
-    .footer .section2 .footer_cont_item2 .footer_icon_text2 {
-    width: 90%;
-    height: 25px;
-    text-align: left;
-    padding: 3px 0 0 0;
-    margin: 0;
-    color: #FFF;
-    font-size: 12px;
-    font-family: "Aller", sans-serif;
-    }
-    
-    .footer .section3 {
-    margin-left: 69px;
-    float: left;
-    display: -webkit-flex;
-    -webkit-flex-direction: column;
-    display: flex;
-    flex-direction: column;
-    }
-    
-    .footer .section3 .aux1 {
-    width: 100%;
-    height: 20px;
-    }
-    
-    .footer .section3 .aux2 {
-    width: 100%;
-    height: 25px;
-    }
-    
-    .footer .section3 .text_title {
-    margin: 0;
-    width: 100%;
-    height: 25px;
-    color: #FFF;
-    font-size: 14px;
-    text-align: left;
-    }
-    
-    .footer .section3 .text_section {
-    margin: 0;
-    width: 100%;
-    height: 20px;
-    color: #FFF;
-    font-size: 11px;
-    text-align: left;
-    }
-    
-    .footer .section3 .input_mail {
-    border-radius: 15px 0 0 15px;
-    margin-right: -17px;
-    
-    @media (max-width: 800px) {
-        .section2,
+@media (max-width: 800px) {
+ 
+	.section2,
     .section2.footer{
     
-            display: block;
-            width: 100%;
-            margin-bottom: 40px;
-    text-align: center;
-        }
-        .footer.section2{
-            margin-left: 0;
-        }
-    }
+
+		display: block;
+		width: 100%;
+		margin-bottom: 40px;
+        text-align: center;
+        
+	}
+ 
+	.footer.section2{
     
-    
+		margin-left: 0;
+	}
+ 
+}
+
